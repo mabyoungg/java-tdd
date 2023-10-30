@@ -20,4 +20,13 @@ public class CalcTest {
         assertThat(result).isEqualTo(20);
 
     }
+
+    @Test
+    @DisplayName("10 - 10 = 0")
+    void test3() {
+        int result = Calc.run("10 - 10");
+
+        assertThat(result).isEqualTo(0);
+
+    }
 }
