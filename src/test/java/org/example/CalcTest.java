@@ -9,7 +9,7 @@ public class CalcTest {
     @Test
     @DisplayName("Calc에 run 메서드 int 리턴")
     void test1() {
-        int result = Calc.run("test");
+        int result = Calc.run("");
     }
 
     @Test
@@ -29,4 +29,14 @@ public class CalcTest {
         assertThat(result).isEqualTo(0);
 
     }
+
+    @Test
+    @DisplayName("10 + 20 = 30")
+    void test4() {
+        int result = Calc.run("10 + 20");
+
+        assertThat(result).isEqualTo(30);
+
+    }
+
 }
