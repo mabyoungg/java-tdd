@@ -58,11 +58,20 @@ public class CalcTest {
     }
 
     @Test
-    @DisplayName("(1 - 1) = 0")
+    @DisplayName("(4 - 1) = 3")
     void test7() {
-        int result = Calc.run("(1 - 1)");
+        int result = Calc.run("(4 - 1)");
 
-        assertThat(result).isEqualTo(0);
+        assertThat(result).isEqualTo(3);
+
+    }
+
+    @Test
+    @DisplayName("((5 - 1)) = 4")
+    void test8() {
+        int result = Calc.run("((5 - 1))");
+
+        assertThat(result).isEqualTo(4);
 
     }
 

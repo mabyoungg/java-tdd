@@ -32,11 +32,17 @@ public class Calc {
     }
 
     private static String stripOuterParentheses(String num) {
-        if (num.startsWith("(") && num.endsWith(")")){
-            return num.substring(1, num.length()-1);
+        while (true) {
+            if(num.contains("(")){
+                if (num.startsWith("(") && num.endsWith(")")){
+                    num = num.substring(1, num.length()-1);
+                }
+            } else {
+                return num;
+            }
+
         }
 
-        return num;
     }
 
 }
