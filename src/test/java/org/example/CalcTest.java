@@ -39,4 +39,31 @@ public class CalcTest {
 
     }
 
+    @Test
+    @DisplayName("10 * 10 = 100")
+    void test5() {
+        int result = Calc.run("10 * 10");
+
+        assertThat(result).isEqualTo(100);
+
+    }
+
+    @Test
+    @DisplayName("10 / 10 = 1")
+    void test6() {
+        int result = Calc.run("10 / 10");
+
+        assertThat(result).isEqualTo(1);
+
+    }
+
+//    @Test
+//    @DisplayName("1 - (1 - 1)")
+//    void test7() {
+//        int result = Calc.run("1 - (1 - 1)");
+//
+//        assertThat(result).isEqualTo(1);
+//
+//    }
+
 }
