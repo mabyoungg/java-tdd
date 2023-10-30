@@ -57,13 +57,13 @@ public class CalcTest {
 
     }
 
-//    @Test
-//    @DisplayName("1 - (1 - 1)")
-//    void test7() {
-//        int result = Calc.run("1 - (1 - 1)");
-//
-//        assertThat(result).isEqualTo(1);
-//
-//    }
+    @Test
+    @DisplayName("(1 - 1) = 0")
+    void test7() {
+        int result = Calc.run("(1 - 1)");
+
+        assertThat(result).isEqualTo(0);
+
+    }
 
 }

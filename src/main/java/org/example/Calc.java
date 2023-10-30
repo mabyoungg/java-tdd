@@ -6,6 +6,8 @@ public class Calc {
             return 0;
         }
 
+        num = stripOuterParentheses(num);
+
         String[] numSplit = num.split(" ");
 
         int num1 = Integer.parseInt(numSplit[0]);
@@ -27,19 +29,14 @@ public class Calc {
 
         return result;
 
-//       switch (sign) {
-//           case "+":
-//               return num1 + num2;
-//           case "-":
-//               return num1 - num2;
-//           case "*":
-//               return num1 * num2;
-//           case "/":
-//               return num1 / num2;
-//           default:
-//               return 0;
-//       }
+    }
 
+    private static String stripOuterParentheses(String num) {
+        if (num.startsWith("(") && num.endsWith(")")){
+            return num.substring(1, num.length()-1);
+        }
+
+        return num;
     }
 
 }
